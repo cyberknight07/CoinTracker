@@ -6,6 +6,10 @@ app.use(Express.json());
 app.use(cors());
 app.use("/api/v1", require("./router/routes"));
 
+app.get("/", (req, res) => {
+  res.send("HI!!")
+});
+
 app.listen(3001, () => {
   dbConnection();
   console.log("My app is listening");
